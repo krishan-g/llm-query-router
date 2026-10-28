@@ -133,7 +133,10 @@ def run(client, key, Q):
 def analyze(bits, cost):
     # headroom shares plus oracle accuracy and cost for one subset of questions
     c, e, cc = bits[CHEAP], bits[EXPENSIVE], cost.loc[bits.index]
-    oracle_cost = cc[CHEAP][c == 1].sum() + cc[EXPENSIVE][c == 0].sum()
+    # oracle sends query to expensive model only when just the expensive model solves it;
+    # queries that neither model can solve go to the cheap model to save cost
+    to_expensive = (c == 0) & (e == 1)
+    oracle_cost = cc[CHEAP][~to_expensive].sum() + cc[EXPENSIVE][to_expensive].sum()
     return pd.Series({
         'n': len(bits),
         'cheap_acc': c.mean(), 'expensive_acc': e.mean(), 'oracle_acc': (c | e).mean(),
@@ -142,7 +145,7 @@ def analyze(bits, cost):
         'only_cheap_solves': ((c == 1) & (e == 0)).mean(),
         'neither_solves': ((c == 0) & (e == 0)).mean(),
         'oracle_cost_frac': oracle_cost / cc[EXPENSIVE].sum(),
-        'oracle_frac_routed_cheap': c.mean(),
+        'oracle_frac_routed_cheap': (~to_expensive).mean(),
     })
 
 
