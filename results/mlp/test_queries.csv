@@ -1,0 +1,81 @@
+qid,dataset,subject,p_cheap_correct,p_expensive_correct,oracle,chosen_threshold,outcome_threshold,chosen_gain,outcome_gain
+math_104,math,Algebra,0.3600742,0.6644334,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_109,math,Algebra,0.5717861,0.75242853,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_110,math,Prealgebra,0.5528156,0.7827192,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_121,math,Counting & Probability,0.48889008,0.5789524,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+math_124,math,Counting & Probability,0.6252933,0.6604186,llama-70b,llama-8b,under-routed,llama-70b,optimal
+math_126,math,Intermediate Algebra,0.536362,0.64033645,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+math_127,math,Algebra,0.4159789,0.7422628,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_128,math,Prealgebra,0.4510138,0.3605746,llama-8b,llama-70b,no model solves,llama-8b,no model solves
+math_14,math,Geometry,0.5451512,0.6578273,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_142,math,Prealgebra,0.5297763,0.5017639,llama-70b,llama-70b,optimal,llama-8b,under-routed
+math_144,math,Prealgebra,0.4962603,0.6061158,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_149,math,Prealgebra,0.46384442,0.72964597,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_150,math,Prealgebra,0.53280306,0.71823,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_151,math,Number Theory,0.30310506,0.64569336,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_153,math,Number Theory,0.43897834,0.69021297,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_160,math,Algebra,0.45492658,0.7170961,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+math_164,math,Precalculus,0.54096764,0.65902233,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_167,math,Prealgebra,0.40878987,0.3849909,llama-70b,llama-70b,optimal,llama-8b,under-routed
+math_168,math,Intermediate Algebra,0.3700091,0.560744,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_169,math,Prealgebra,0.3262664,0.52428675,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_184,math,Intermediate Algebra,0.6190997,0.7248819,llama-8b,llama-8b,no model solves,llama-70b,no model solves
+math_185,math,Precalculus,0.37218872,0.5732382,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+math_19,math,Prealgebra,0.70105004,0.75613695,llama-70b,llama-8b,under-routed,llama-70b,optimal
+math_192,math,Number Theory,0.41604018,0.45208278,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_20,math,Counting & Probability,0.51227057,0.7603774,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_22,math,Prealgebra,0.42734587,0.4483784,llama-70b,llama-70b,optimal,llama-8b,under-routed
+math_27,math,Number Theory,0.47164455,0.5650168,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+math_28,math,Number Theory,0.3641013,0.36687413,llama-8b,llama-70b,no model solves,llama-8b,no model solves
+math_31,math,Algebra,0.52330476,0.74615717,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_33,math,Prealgebra,0.4273599,0.76394635,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_69,math,Algebra,0.43485752,0.6597155,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_71,math,Geometry,0.2655736,0.4610747,llama-70b,llama-70b,optimal,llama-70b,optimal
+math_75,math,Number Theory,0.47012734,0.6318092,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+math_78,math,Prealgebra,0.4438726,0.55721,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+math_82,math,Algebra,0.39826503,0.6872508,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_83,math,Algebra,0.40281293,0.6433113,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_85,math,Geometry,0.4215831,0.41292593,llama-8b,llama-70b,no model solves,llama-8b,no model solves
+math_86,math,Prealgebra,0.5005501,0.6894884,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+math_90,math,Intermediate Algebra,0.45031023,0.6201765,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+math_99,math,Algebra,0.4445378,0.78413934,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_101,mmlupro,psychology,0.53355646,0.65529555,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_103,mmlupro,law,0.56109023,0.5885746,llama-70b,llama-70b,optimal,llama-8b,under-routed
+mmlupro_105,mmlupro,law,0.531473,0.42564383,llama-70b,llama-70b,optimal,llama-8b,under-routed
+mmlupro_109,mmlupro,other,0.4282155,0.5975385,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_112,mmlupro,economics,0.4388033,0.7702109,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_120,mmlupro,chemistry,0.43187094,0.6235858,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_121,mmlupro,business,0.588903,0.80129266,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_124,mmlupro,health,0.45593074,0.6884162,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_125,mmlupro,business,0.448184,0.75865,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_136,mmlupro,physics,0.5144441,0.6980551,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_137,mmlupro,health,0.44957843,0.5807186,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_143,mmlupro,chemistry,0.3486512,0.55383724,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_146,mmlupro,health,0.6011696,0.7462769,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_154,mmlupro,economics,0.7333305,0.73960227,llama-8b,llama-8b,optimal,llama-8b,optimal
+mmlupro_156,mmlupro,physics,0.5174688,0.6856604,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_157,mmlupro,chemistry,0.35793725,0.59696335,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_16,mmlupro,math,0.5092072,0.7333014,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_163,mmlupro,physics,0.4007181,0.8327913,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_165,mmlupro,philosophy,0.57816964,0.6052197,llama-70b,llama-70b,optimal,llama-8b,under-routed
+mmlupro_180,mmlupro,engineering,0.43406907,0.5224928,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_183,mmlupro,other,0.44160783,0.47289336,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_190,mmlupro,other,0.5385018,0.53070134,llama-8b,llama-70b,no model solves,llama-8b,no model solves
+mmlupro_191,mmlupro,physics,0.40062836,0.7235835,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_2,mmlupro,economics,0.39735553,0.7793996,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_22,mmlupro,physics,0.5198176,0.7243282,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_28,mmlupro,chemistry,0.43435025,0.54403216,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_29,mmlupro,engineering,0.45865786,0.5127502,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_38,mmlupro,math,0.5544826,0.64226806,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_45,mmlupro,computer science,0.44911417,0.61941415,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_48,mmlupro,physics,0.43308505,0.5135245,llama-70b,llama-70b,optimal,llama-70b,optimal
+mmlupro_58,mmlupro,physics,0.4427619,0.84228563,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_6,mmlupro,computer science,0.40132186,0.47824717,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_60,mmlupro,biology,0.5422373,0.6695876,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_78,mmlupro,computer science,0.24239974,0.6098373,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_83,mmlupro,psychology,0.41639778,0.51906556,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_85,mmlupro,health,0.6118426,0.58571666,llama-8b,llama-8b,no model solves,llama-8b,no model solves
+mmlupro_87,mmlupro,economics,0.5891206,0.6552678,llama-8b,llama-70b,over-routed,llama-70b,over-routed
+mmlupro_88,mmlupro,health,0.5563967,0.6533526,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_89,mmlupro,law,0.458567,0.57491547,llama-8b,llama-70b,no model solves,llama-70b,no model solves
+mmlupro_97,mmlupro,math,0.5483744,0.6422138,llama-8b,llama-70b,over-routed,llama-70b,over-routed

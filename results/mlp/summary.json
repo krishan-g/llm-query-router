@@ -1,0 +1,81 @@
+{
+  "split_sizes": {
+    "train": 240,
+    "val": 80,
+    "test": 80
+  },
+  "hyperparameters": {
+    "hidden": 32,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "dropout": 0.3
+  },
+  "test_auroc_cheap_head": 0.5541818181818181,
+  "baselines_test": {
+    "always_cheapest": {
+      "task_acc": 0.3125,
+      "cost_frac": 0.09186779936303618,
+      "routing_acc": 0.65,
+      "latency_s": 7.277914613485336,
+      "under_routed": 0.35,
+      "over_routed": 0.0,
+      "none_solve_sent_expensive": 0.0,
+      "frac_llama-8b": 1.0,
+      "frac_llama-70b": 0.0
+    },
+    "always_most_expensive": {
+      "task_acc": 0.65,
+      "cost_frac": 1.0,
+      "routing_acc": 0.35,
+      "latency_s": 16.799102613329886,
+      "under_routed": 0.0,
+      "over_routed": 0.3125,
+      "none_solve_sent_expensive": 0.3375,
+      "frac_llama-8b": 0.0,
+      "frac_llama-70b": 1.0
+    },
+    "oracle": {
+      "task_acc": 0.6625,
+      "cost_frac": 0.4114750390278806,
+      "routing_acc": 1.0,
+      "latency_s": 10.212459635734557,
+      "under_routed": 0.0,
+      "over_routed": 0.0,
+      "none_solve_sent_expensive": 0.0,
+      "frac_llama-8b": 0.65,
+      "frac_llama-70b": 0.35
+    }
+  },
+  "mlp_test_at_t_star": {
+    "task_acc": 0.625,
+    "cost_frac": 0.9481276026120193,
+    "routing_acc": 0.3625,
+    "latency_s": 16.617843763378477,
+    "under_routed": 0.025,
+    "over_routed": 0.3,
+    "none_solve_sent_expensive": 0.3125,
+    "frac_llama-8b": 0.0625,
+    "frac_llama-70b": 0.9375,
+    "t": 0.61,
+    "acc_gap_pts": 2.500000000000002,
+    "meets_target": false
+  },
+  "mlp_gain_rule_test_at_t_star": {
+    "task_acc": 0.575,
+    "cost_frac": 0.8748558482058197,
+    "routing_acc": 0.35,
+    "latency_s": 14.841646374610281,
+    "under_routed": 0.075,
+    "over_routed": 0.3,
+    "none_solve_sent_expensive": 0.275,
+    "frac_llama-8b": 0.15,
+    "frac_llama-70b": 0.85,
+    "t": 0.03,
+    "acc_gap_pts": 7.500000000000007,
+    "meets_target": false
+  },
+  "mlp_test_mean_gap_to_oracle_curve": 0.14211732139678343,
+  "mlp_gain_rule_test_mean_gap_to_oracle_curve": 0.14199263311748164,
+  "random_test_mean_gap_to_oracle_curve": 0.12167935381573605,
+  "length_test_mean_gap_to_oracle_curve": 0.1396858999503994
+}
