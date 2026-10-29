@@ -1,5 +1,5 @@
 """Pilot: oracle headroom for Llama 3.1 8B vs Llama 3.3 70B on MATH and MMLU-Pro.
-Queries both models on N questions per dataset (resuming from results/*.jsonl),
+Queries both models on every MATH and MMLU-Pro test question (resuming from results/*.jsonl),
 grades them, prints the oracle headroom table from the proposal, and writes
 results/labels.csv, the training table for the linear and MLP probes.
 """
@@ -18,9 +18,9 @@ from openai import OpenAI
 ROOT = Path(__file__).parent / 'results'
 ROOT.mkdir(exist_ok=True)
 DEEPINFRA_API_KEY = "ASDASD"
-SEED, N = 0, 200
-MAX_TOKENS = 1024
-MAX_WORKERS = 16
+SEED = 0
+MAX_TOKENS = 2048
+MAX_WORKERS = 32
 
 # DeepInfra model id and UsD per 1M input tokens USD per 1M output tokens
 MODELS = {
@@ -41,13 +41,13 @@ def load_questions():
     qpath = ROOT / 'questions.csv'
     if not qpath.exists():
         m = concatenate_datasets([load_dataset('EleutherAI/hendrycks_math', s, split='test')
-                                  for s in MATH_SUBJECTS]).shuffle(seed=SEED).select(range(N))
-        p = load_dataset('TIGER-Lab/MMLU-Pro', split='test').shuffle(seed=SEED).select(range(N))
+                                  for s in MATH_SUBJECTS]).shuffle(seed=SEED)
+        p = load_dataset('TIGER-Lab/MMLU-Pro', split='test').shuffle(seed=SEED)
         pd.concat([
-            pd.DataFrame({'qid': [f'math_{i}' for i in range(N)], 'dataset': 'math',
+            pd.DataFrame({'qid': [f'math_{i}' for i in range(len(m))], 'dataset': 'math',
                           'question': m['problem'], 'subject': m['type'],
                           'truth': m['solution'], 'options': None}),
-            pd.DataFrame({'qid': [f'mmlupro_{i}' for i in range(N)], 'dataset': 'mmlupro',
+            pd.DataFrame({'qid': [f'mmlupro_{i}' for i in range(len(p))], 'dataset': 'mmlupro',
                           'question': p['question'], 'subject': p['category'],
                           'truth': p['answer'], 'options': [json.dumps(o) for o in p['options']]}),
         ], ignore_index=True).to_csv(qpath, index=False)
@@ -151,7 +151,7 @@ def analyze(bits, cost):
 
 def main():
     Q = load_questions()
-    client = OpenAI(api_key=DEEPINFRA_API_KEY, base_url='https://api.deepinfra.com/v1/openai')
+    client = OpenAI(api_key=DEEPINFRA_API_KEY, base_url='https://api.deepinfra.com/v1/openai', max_retries=5)
     for key in [EXPENSIVE, CHEAP]:
         run(client, key, Q)
 

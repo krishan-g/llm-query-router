@@ -3,3 +3,6 @@ datasets
 pandas
 math-verify
 matplotlib
+sentence-transformers
+torch
+scikit-learn
