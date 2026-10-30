@@ -24,7 +24,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    D[<b>Data</b><br/>x: 384-dim embedding<br/>y: 8B correct?, 70B correct?] --> M[<b>Model</b><br/>affine, sigmoid] --> L[<b>Loss</b><br/>BCE per output<br/>summed over models] --> O[<b>Optimizer</b><br/>Adam, full batch<br/>weight decay picked on val]
+    D[<b>Data</b><br/>x: standardized 384-dim embedding<br/>y: 8B correct?, 70B correct?] --> M[<b>Model</b><br/>affine, sigmoid] --> L[<b>Loss</b><br/>BCE per output<br/>summed over models] --> O[<b>Optimizer</b><br/>Adam, full batch<br/>weight decay picked on val]
 ```
 
 ## MLP probe
@@ -49,7 +49,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    D[<b>Data</b><br/>same as linear] --> M[<b>Model</b><br/>affine, ReLU, dropout<br/>affine, sigmoid] --> L[<b>Loss</b><br/>same as linear] --> O[<b>Optimizer</b><br/>Adam, mini-batch 32<br/>early stopping, grid search on val]
+    D[<b>Data</b><br/>x: standardized 384-dim embedding<br/>y: 8B correct?, 70B correct?] --> M[<b>Model</b><br/>affine, ReLU, dropout<br/>affine, sigmoid] --> L[<b>Loss</b><br/>BCE per output<br/>summed over models] --> O[<b>Optimizer</b><br/>Adam, mini-batch 32<br/>early stopping, grid search on val<br/>3 seeds, outputs averaged]
 ```
 
 ## Routing rule
