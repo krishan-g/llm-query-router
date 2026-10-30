@@ -1,8 +1,7 @@
 # Linear probe router: logistic regression on frozen all-MiniLM-L6-v2 embeddings with one
 # independent sigmoid output per candidate model.
 # Reads results/labels.csv, the train/val/test split in results/splits.csv and the embedding cache
-# results/embeddings.npz (both made by mlp_probe.py, so the two probes see the same questions).
-# Writes results/linear/curve.csv and results/linear/accuracy_vs_cost.png.
+# results/embeddings.npz and writes results/linear/curve.csv and results/linear/accuracy_vs_cost.png.
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
